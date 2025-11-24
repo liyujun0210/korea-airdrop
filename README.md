@@ -1,73 +1,42 @@
-# React + TypeScript + Vite
+# 한국 에어드랍 클레이머 (Korea Airdrop Claimer)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+한국 유저를 위해 3일 만에 만든 가장 빠르고 예쁜 멀티체인 에어드랍 조회 도구  
+100% 한국어 • wagmi + RainbowKit + Vite + Tailwind • 실시간 체인 스캔
 
-Currently, two official plugins are available:
+라이브 데모 → https://korea-airdrop-nr8gxrpf4-liyujuns-projects-f6b70909.vercel.app
+  
+깃허브 → https://github.com/liyujun0210/korea-airdrop-claimer
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+지금 바로 지갑 연결 후 에어드랍 확인해보세요!
+## Tech Stack & Dependencies
 
-## React Compiler
+```json
+"dependencies": {
+  "@rainbow-me/rainbowkit": "^2.1.5",
+  "@tanstack/react-query": "^5.59.0",
+  "react": "^18.3.1",
+  "react-dom": "^18.3.1",
+  "viem": "^2.21.1",
+  "wagmi": "^2.12.14"
+},
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+"devDependencies": {
+  "@types/react": "^18.3.5",
+  "@types/react-dom": "^18.3.0",
+  "@vitejs/plugin-react": "^4.3.1",
+  "autoprefixer": "^10.4.20",
+  "postcss": "^8.4.47",
+  "tailwindcss": "^3.4.13",
+  "typescript": "^5.6.2",
+  "vite": "^5.4.8"
+}
+# 基础依赖
+npm install react react-dom
+npm install wagmi viem @rainbow-me/rainbowkit @tanstack/react-query
 
-## Expanding the ESLint configuration
+# 样式 & 构建
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# Vite + TypeScript（项目已经创建的话可跳过）
+npm create vite@latest . -- --template react-ts
