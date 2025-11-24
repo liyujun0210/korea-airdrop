@@ -3,7 +3,7 @@
 한국 유저를 위해 3일 만에 만든 가장 빠르고 예쁜 멀티체인 에어드랍 조회 도구  
 100% 한국어 • wagmi + RainbowKit + Vite + Tailwind • 실시간 체인 스캔
 
-라이브 데모 → https://korea-airdrop-nr8gxrpf4-liyujuns-projects-f6b70909.vercel.app
+라이브 데모 → [https://korea-airdrop-nr8gxrpf4-liyujuns-projects-f6b70909.vercel.app](https://korea-airdrop-ivzbks0xb-liyujuns-projects-f6b70909.vercel.app)
   
 깃허브 → https://github.com/liyujun0210/korea-airdrop-claimer
 
